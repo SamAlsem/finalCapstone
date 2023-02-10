@@ -54,7 +54,10 @@ def read_shoes_data():
         print("File not found: inventory.txt")
 
 
+# function added to a variable so that it is acccessible globally
 view_data = read_shoes_data()
+
+# new function greated with the above variable called, looped over and each item in the populated shoe_list returned so that this data can be references throughout the program
 
 
 def data_shoes():
@@ -222,12 +225,10 @@ def Main():
 
         elif user_input == "low":
             data_shoes()
-            # read_shoes_data()
             re_stock()
 
         elif user_input == "search":
             data_shoes()
-            # read_shoes_data()
             code_input = input(
                 "Enter the code of the shoes you are searching for: ")
             shoe = search_shoe(code_input)
@@ -241,13 +242,11 @@ def Main():
         elif user_input == "value":
             print("The value of each shoe range is as follows: ")
             data_shoes()
-            # read_shoes_data()
             value_per_item()
 
         elif user_input == "quantity":
             print("The following shoes should be put on sale: ")
             data_shoes()
-            # read_shoes_data()
             highest_qty()
 
         elif user_input == "quit":
